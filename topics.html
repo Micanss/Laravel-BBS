@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>实验楼bbs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/navbar-fixed-top.css" rel="stylesheet">
+  </head>
+
+  <body id="fakeloader" >
+
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">实验楼-Laravel</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="margin-bottom: 1px">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">社区</a></li>
+            <li><a href="#about">课程</a></li>
+            <li><a href="#contact">问答</a></li>
+            <li><a href="#contact">酷站</a></li>
+            <li><a href="#contact">Wiki</a></li>
+            <li><a href="#contact">招聘</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" id="search" placeholder="Search...">
+          </form>
+          </li>
+
+            <li><a href="#">新增主题</a></li>
+            <li><a href="#">新消息:<span class="badge">0</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" aria-expanded="false" style="height: 50px;padding-top: 11px">
+              <span><img class="img-circle" src="image/tx.jpeg" style="height: 30px;width: 30px" alt=""></span>
+              Linfue
+               <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" style="text-align: center;">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;资料设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-share"></span> &nbsp;&nbsp;注销</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container" id="container" style="min-height: 800px">
+      <div class="col-md-9 topics-index main-col">
+        <div class="panel panel-default">
+          <div class="panel-heading item-selector">
+            <ul class="list-inline topic-filter">
+              <li class="view-selector active" data-toggle="popover" data-placement="top" data-content="最后回复排序"><a href="#">活跃 &nbsp;</a></li>
+              <li class="view-selector" data-toggle="popover" data-placement="top" data-content="点赞数排序"><a href="#">投票 &nbsp;</a></li>
+              <li class="view-selector" data-toggle="popover" data-placement="top" data-content="只看精华的内容"><a href="#">精华 &nbsp;</a></li>
+              <li class="view-selector" data-toggle="popover" data-placement="top" data-content="发布时间排序"><a href="#">最近 &nbsp;</a></li>
+              <li class="view-selector" data-toggle="popover" data-placement="top" data-content="无人问津的话题"><a href="#">零回复 &nbsp;</a></li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group row topic-list">
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle">
+                    </a>
+                </div>
+                 <div class="reply_count_area hidden-xs">
+                    <div class="count_of_votes" title="投票数">
+                    19
+                    </div>
+                    <div class="count_set">
+                        <span class="count_of_replies" title="回复数">
+                          11
+                        </span>
+                        <span class="count_seperator">/</span>
+                        <span class="count_of_visits" title="查看数">
+                          285
+                        </span>
+                    </div>
+                </div>
+                <div class="infos">
+                  <div class="media-heading">
+                      <span class="hidden-xs label label-success">分享</span>
+                      <a href="#" title="Laravel 5.3 中文文档翻译完成">
+                        Laravel 5.3 中文文档翻译完成
+                      </a>
+                      <a class="reply_last_time hidden-xs meta small" href="#">
+                        <img src="image/toux.jpg" class="user_small_avatar avatar-circle img-circle" alt="">
+                        <span class="timeago" title="1小时前">1小时前</span>
+                      </a>
+                  </div>  
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-footer" style="padding: 0px 30px 0 0;">
+
+              <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 side-bar" style="padding-left: 0px;">
+        <div class="panel panel-default">
+          <div class="panel-body create-topic">
+            <h3><a href="#"><span class="glyphicon glyphicon-pencil"></span>新建话题</a></h3>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            推荐资源
+          </div>
+          <div class="panel-body" style="padding: 0px 5px;">
+            <ul class="list-group tuijian" style="margin-bottom: 0px;">
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            活跃用户
+          </div>
+          <div class="panel-body huoyue">
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+            <a href="#" data-toggle="popover" data-placement="top" data-content="小明"><img src="image/toux.jpg" class="img-circle" style="width: 28px;height: 28px" alt=""></a>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            热门话题
+          </div>
+          <div class="panel-body">
+            <ul class="list-group remen" style="margin-bottom: 0px;">
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+              <li class="list-group-item">Laravel 的核心概念</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<footer class="footer">
+    <div class="container" id="footer-container">
+    <div class="col-xs-6 col-md-4">
+    <img src="image/logo.png" alt="">
+    <p>实验楼是国内领先的IT技术实训平台，采用创新的“在线实验”学习模式，为学生及在职程序员提供编程、运维、测试、云计算、大数据、数据库等最新的IT技术实践课程。</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>统计信息：</h4>
+      <ul class="list-unstyled">
+        <li>会员人数：3</li>
+        <li>话题数：3</li>
+        <li>PV:100</li>
+        <li>UV:5432534</li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>其他信息：</h4>
+      <ul class="list-unstyled">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">技术博客</a></li>
+        <li><a href="#">加入我们</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright @2013-2016 实验楼在线教育 | <a href="#">蜀ICP备13019762号</a> <a href="#">站长统计</a></p>
+    </div>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/myjs.js"></script>
+  </body>
+</html>

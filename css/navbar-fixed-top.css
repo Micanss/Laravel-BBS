@@ -28,6 +28,9 @@ li a{
     -webkit-animation-name: "fudong"; /*动画名称，需要跟@keyframes定义的名称一致*/
     -webkit-animation-duration: 0.5s;/*动画持续的时间长*/
     margin-top: -7px;
+   -webkit-box-shadow: 0 0 15px 0 #f3d42e;   
+   -moz-box-shadow: 0 0 15px 0 #f3d42e;   
+    box-shadow: 0 0 4px 1px #f3d42e;  
 }
 
 @-webkit-keyframes 'fudong' {
@@ -35,7 +38,7 @@ li a{
        margin-top: 0px;
      }
    to {
-	margin-top: -7px;
+	     margin-top: -7px;
     }
  }
  .media{
@@ -67,7 +70,8 @@ li a{
 }
 .footer{
   background-color: #191E29;
-  color: #777777
+  color: #777777;
+  margin-top: 20px;
 }
 #footer-container{
   padding: 20px;
@@ -85,4 +89,96 @@ li a{
 .footer-bottom p a:hover{
   color: white;
   text-decoration: none;
+}
+#search{
+  border-style: none;
+  width: 200px;
+}
+#container{
+  width: 1170px;
+  padding: 0px;
+}
+#container div.main-col{
+  padding-left: 0px;
+}
+#container div.item-selector{
+  height: 50px;
+}
+ul.topic-filter{
+  padding-top: 7px;
+}
+ul.topic-filter a:hover{
+  color: black;
+  text-decoration: none;
+}
+ul.topic-filter li.active{
+  border-bottom: 2px solid;
+  border-bottom-color: #DC817E;
+}
+.create-topic{
+  text-align: center;
+  padding: 5px 50px 10px 50px
+}
+.create-topic a{
+  border: 1px solid #4FB7AD;
+  border-radius: 5px;
+  padding: 5px;
+  letter-spacing: 5px;
+  font-family: 幼圆;
+  color: #4FB7AD;
+}
+.create-topic a:hover{
+  color: white;
+  text-decoration: none;
+}
+.reply_count_area{
+  text-align: center;
+  margin-left: -5px;
+  margin-right: 15px;
+  float: left;
+}
+.count_of_votes{
+  font-size: 18px;
+  color: #A778C0;
+  margin-top: 3px;
+}
+.count_set{
+  font-size: 10px;
+  letter-spacing: -1px;
+  color: #B8C2D2;
+   margin-top: -3px;
+}
+#container div.panel-body{
+  padding-top: 0;
+}
+#container div.panel-body div.pull-left{
+  float: left;
+}
+div.infos{
+  margin-top: 10px;
+  clear: float;
+}
+img.user_small_avatar{
+  width: 20px;
+  height: 20px;
+}
+div.side-bar div.panel-heading{
+  text-align: center
+}
+div.side-bar div.panel-heading {
+  padding: 5px;
+}
+ul.tuijian li a:hover{
+  color: black;
+  text-decoration: none;
+}
+ul.tuijian li ,ul.remen li{
+  border-right: none;
+  border-left: none
+}
+div.huoyue a{
+  margin-top: 5px;
+}
+div.huoyue img{
+  margin-bottom: 5px;
 }
