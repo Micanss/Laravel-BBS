@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>实验楼bbs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/navbar-fixed-top.css" rel="stylesheet">
+  </head>
+
+  <body id="fakeloader" >
+
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">实验楼-Laravel</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="margin-bottom: 1px">
+          <ul class="nav navbar-nav">
+            <li><a href="topics.html">社区</a></li>
+            <li class="active"><a href="#">课程</a></li>
+            <li><a href="questions.html">问答</a></li>
+            <li><a href="sites.html">酷站</a></li>
+            <li><a href="#contact">Wiki</a></li>
+            <li><a href="#contact">招聘</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" id="search" placeholder="Search...">
+          </form>
+          </li>
+
+            <li><a href="#">新增主题</a></li>
+            <li><a href="#">新消息：<span class="badge">0</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" aria-expanded="false" style="height: 50px;padding-top: 11px">
+              <span><img class="img-circle" src="image/tx.jpeg" style="height: 30px;width: 30px" alt=""></span>
+              Linfue
+               <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" style="text-align: center;">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;资料设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-share"></span> &nbsp;&nbsp;注销</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container" id="container" style="min-height: 800px">
+      <div class="col-md-9 topics-index main-col">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <h1 class="panel-title topic-title">Laravel 5.3 中文文档翻译完成</h1>
+              <div class="meta inline-block">
+                <a href="https://laravel-china.org/categories/3" class="remove-padding-left">
+                  <span class="glyphicon glyphicon-folder-close"></span> 公告
+                </a>
+                ⋅
+                <a class="author" href="https://laravel-china.org/users/1">
+                  Summer
+                </a>
+                ⋅
+                于 <abbr title="2016-10-19 07:48:55">2天前</abbr>
+                ⋅
+                    最后回复由
+                    <a href="https://laravel-china.org/users/103">
+                      appleboy
+                    </a>
+                   于 <abbr title="2016-10-20 10:17:37">1天前</abbr>
+                  ⋅
+                               3066 阅读
+              </div>
+          </div>
+          <div class="panel-body">
+            <div class="markdown-body topic-content">
+<h1 id="-">微信公众平台介绍与接入</h1>
+<h2 id="-">一、实验简介</h2>
+<h3 id="1-">1.实验目的</h3>
+<p>本课程将带领大家学习一门新的技术：PHP微信公众号接口开发。主要目的是让大家了解微信公众号接口开发技术，了解公众号和服务器的消息交互和处理。利用php开发一个简易的公众号SDK，封装一些常用的接口，最后通过测试并搭建一个自己的微信公众号，实现与粉丝的交互。</p>
+<p>本课程总共分为三个实验。本次实验主要为大家介绍一下微信公众平台情况，配置服务器并接入微信公众平台进行开发。</p>
+<p>本课程着重于接口开发和功能测试，暂不需要前台的操作界面。</p>
+<h3 id="2-">2.开发工具</h3>
+<p>开启 Apache 服务器：</p>
+<pre><code class="lang-sh hljs bash">sudo service apache2 start
+</code></pre>
+<p>代码编写：</p>
+<ul>
+
+<li><p>关键词回复（全匹配/模糊匹配）</p>
+<p>类似于和机器人聊天，只要你发送的消息中包含某些关键词，系统就会自动给你发相应的消息。比如，我设置关键词 <code>笑话</code>（可设置多个关键字），回复内容为一段笑话。当用户给你发消息时，系统会自动检测关键字（可以设置完全匹配或模糊匹配），发送内容 <code>给我讲一个笑话</code>，那么系统会自动下发你设置好的笑话内容。当然，你也可以回复语音，图片，图文或者视频内容。非常好玩。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476425749758.png/wm" alt="此处输入图片的描述"></p>
+</li>
+<li><p>自定义菜单（默认未开启）</p>
+<p>自定义客户端可以使用的菜单功能</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476426214211.png/wm" alt="此处输入图片的描述"></p>
+</li>
+</ul>
+<p>设置好你的菜单和功能之后，一个简单的公众号就可以使用了（更多的功能，自己去探索）。</p>
+<p>查看当前公众号的信息：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476426343585.png/wm" alt="此处输入图片的描述"></p>
+<p>拿起你的手机，扫描你的二维码，成为你的公众号的第一个粉丝。你将会体验到你刚才设置的功能。当然，这只是一个简单的公众号，如果你有兴趣，有内容，有粉丝的话，你也可以运营你自己的公众号，在上面发布有用的信息，让更多人看到。</p>
+<hr>
+<p>如果你满足于上面的效果和功能，那我只能说你太容易满足了。上面的教程只是适用于不会编程的小白用户，不用写一行代码，就可以搭建一个功能丰富的公众号。既然你在学习本课程，说明你具有一定的编程能力，接下来，让我们更加深入了解微信公众号是如何实现这些功能的，他们的信息是如何传递的，消息是如何处理的。让我们通过写代码方式来实现上面的功能。</p>
+<blockquote>
+<p>也许你会纳闷，上面的公众号后台使用非常方便，功能也很多，为什么我们还要自己写代码？</p>
+<p>原因很简单，上面管理的功能都是一些比较低级的功能，成为开发者之后，就可以使用公众平台的高级功能、自动应答菜单、客服、自定义菜单、微官网、微信商城等功能。这些都需要我们自己调用公众平台提供的API去对接实现</p>
+<p>当然，本课程也不会涉及到这些高级的功能，我们主要通过代码的方式，先实现一些低级的功能，比如消息管理，用户管理以及素材管理等，虽然这些功能都可以通过管理界面实现。但是作为开发者，我们更愿意用代码去实现，在此过程中，不断提高编程能力，还可以了解公众号运行的原理，为以后开发高级功能打好基础。</p>
+</blockquote>
+<h3 id="2-3-">2.3 成为开发者</h3>
+<p>虽然公众平台提供了api调用，但是限制了权限频率，你可以查看 [开发]---&gt;[接口权限]，查看当前接口使用权限和使用频率。可以看到，一个新的公众号，可使用的接口数量太少了，根本达不到我们练习的目的。不过，我们申请一个测试号，点击 [开发]---&gt;[开发者工具]，你可以看到以下页面：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476428655851.png/wm" alt="此处输入图片的描述"></p>
+<p>我做了两处标记，一个是开发者文档，没有文档，开发寸步难行。所有的操作都需要根据文档的说明来做。</p>
+<p>第二个就是特意为开发者准备的测试账号，使用这个账号，我们可以使用所有高级和初级api，基本上没有任何条件限制。最适合我们用来做开发练习。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476429330051.png/wm" alt="此处输入图片的描述"></p>
+<p>进入之后，你就会得到测试号的开发配置信息。这些信息在正常的公众号里也有。点击 [开发]---&gt;[基本配置] 就可以看到你的公众号开发者信息：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476429580007.png/wm" alt="此处输入图片的描述"></p>
+<p>测试号与普通的公众号最大的区别就是不限制接口使用权限，使用频率限制也降低了，更好地帮助开发者调用API测试自己的应用。</p>
+<blockquote>
+<p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID，如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID，可以在用户管理-获取用户基本信息（UnionID机制）文档了解详情。</p>
+<p>AppSecret(应用密钥)：这个相当于你的账户密码，一般情况下不能泄露。需要同时传递 OpenID 和 AppSecret 才可以获取接口凭证 access_token。</p>
+<p>公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储，详见获取接口调用凭据（access_token）文档</p>
+</blockquote>
+<p>为了接入微信公众平台，我们需要配置自己的服务器（非本地），完成与微信服务器对接。</p>
+<p>这里我就不一步一步的截图教大家了。在开发中文档中有详细的说明，为了帮助开发者快速入门公众平台，在开发文档中给我们提供了一个入门教程：<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1472017492_58YV5&amp;token=&amp;lang=zh_CN" target="_blank">入门指引</a> 。你可以根据上面的操作完成服务器配置与接入工作，而且还提供了一些小示例，不过是用 python 实现的，待会儿我们用 php 也可以完成。</p>
+<p>当你看了<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1472017492_58YV5&amp;token=&amp;lang=zh_CN" target="_blank">入门指引</a> 之后，肯定很郁闷，因为其中有一项配置是需要使用一台在线服务器。其实原因很简单：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476432289268.png/wm" alt="此处输入图片的描述"></p>
+<p>默认情况下，我们发送的所有消息都是微信服务器来接受、处理以及回复的，你现在自己的公众号就是这样的，你刚才设置的那些消息回复和菜单相应都是由微信服务器来处理。</p>
+<p>而现在，我们需要自己开发微信公众号接口，那么微信服务器就只是一个中继站，它负责用户与开发者服务器之间的信息传递。用户发送一条消息，微信服务器接收到，然后经过数据格式处理，将数据发送给开发者服务器，开发者就可以收到这些信息，开发者可以对用户的消息做处理并且做出回应，回应的消息也将被微信服务器接受，再次经过数据格式的转换，发送给用户。</p>
+<p>所以为了保证信息正确传递和接受，开发者必须要有一台在线服务器能和微信服务器 进行数据交互。</p>
+<p>我相信学习本课程的绝大多数人都没有一台在线的服务器。</p>
+<p>接下来最直接的问题就是：如何拥有一台在线服务器？一般情况下，因为种种原因，外网是不能访问我们自己的个人电脑的。所以我们本地搭建的那些web项目，别人没办法访问。最简单也是最有效地方法就是购买阿里云或腾讯云的 VPS。不过这需要一定的资金，我觉得对你们来说还不至于。</p>
+<p>对于程序员来说，越困难的技术，有人越想去解决。总会有聪明的人想出最好解决方案。这里我给大家推荐一个内网穿透神器：<a href="https://ngrok.com/" target="_blank">ngrok</a> ，因为这是国外的网站，因为某些原因，下载网速可能很慢，所以我为大家上传了这个文件，使用以下命令获取：</p>
+<pre><code class="lang-sh hljs bash">wget http://labfile.oss.aliyuncs.com/courses/676/ngrok-stable-linux-amd64.zip
+</code></pre>
+<p>他的作用：<code>ngrok allows you to expose a web server running on your local machine to the internet. Just tell ngrok what port your web server is listening on.</code> 翻译过来就是：ngrok允许你将本地计算机上运行的Web服务器公开到互联网。 只要告诉ngrok你的web服务器正在监听什么端口。</p>
+<p>这正是我们想要的功能，我们我们平时都是用本地Apache作为服务器，监听 80 端口，使用 <code>127.0.0.1:80</code> 就可以访问本地服务。那么，通过这个软件，他会给我们一个动态域名，通过这个域名可以映射到我们的本地web地址。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476434421722.png/wm" alt="此处输入图片的描述"></p>
+<p>通过这样的方式，我们本地服务器就变成了在线服务器，通过访问他提供的这个域名，实际访问的是我们本地的服务。如果你有其他的自己本地的项目，也可以变成线上项目，让其他人访问你的服务（如果你曾经有想上线的想法，赶快体验一下）。通过本地的 4040 端口，可以查看 ngrok 的运行状态和通信请求记录。</p>
+<p>不过这种方式只适合用来学习且短时间内使用，因为这个程序不能关闭，如果你关闭了程序，你当前的域名就会失效，下次再使用该程序，你又会得到一个新的域名，而且这个域名非常不容易记住。如果你想让你的项目一直在线，那么你必须保持这个程序运行，且你的电脑也不能关机，而且他的在线状态也不是很稳定。所以只适合用来学习交流用途，如果你有上线需求的话，还是去买VPS吧。不过这个工具对我们来说已经足够使用了。</p>
+<h3 id="2-4-">2.4 在线服务器接入</h3>
+<p>接下来将我们服务器与微信服务器对接。</p>
+<p>实验楼的在线环境默认没有开启 Apache 服务器，使用以下命令开启：</p>
+<pre><code class="lang-sh hljs bash">sudo service apache2 start
+</code></pre>
+<p>在浏览器中打开 <code>127.0.0.1:80</code> ，我们的服务器已经运行了：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476435761291.png/wm" alt="此处输入图片的描述"></p>
+<p>将下载的 ngrok 解压并运行：</p>
+<pre><code class="lang-sh hljs bash">unzip ngrok-stable-linux-amd64.zip
+./ngrok http 80     <span class="hljs-comment">#因为网络原因，可能需要尝试多次获等待一段时间</span>
+</code></pre>
+<p>你就可以得到我上面运行的界面，它提供了两个 url ，分别是 <code>http</code> 和 <code>https</code> 。保持持续运行，复制任意一个 url，放到浏览器中打开，你会看到如下界面（访问速度可能较慢，耐心等待）：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476436349939.png/wm" alt="此处输入图片的描述"></p>
+<p>注意到url的变化了吗？通过这样的方式，我们本地的项目就变成在线项目了。记住你当前的 url。</p>
+<hr>
+<p>进入测试账号管理页面，看到有 <code>接口配置信息</code> 的表单，<code>URL</code> 就填上你刚才所使用的 url。<code>Token</code> 是你自定义的字符串，随便填什么都行，我填的是 <code>helloweixin</code> 。点击提交，百分百是配置失败的。接下来我讲一下开发者服务器是如何接入微信服务器的（首次配置）。</p>
+<p>这在开发者文档中有详细说明：<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421135319&amp;token=&amp;lang=zh_CN" target="_blank">接入指南</a> ，具体的内容大家自己花时间去看，文档中的示例是普通账号的配置方式，稍微多一些选项，在测试账号中就非常简单了，不过原理都是一样的。我这里就简单总结一下：</p>
+<p>当我们配置好接口信息之后，点击提交之后，微信服务器将发送GET请求到填写的服务器地址URL上，包含四个字段：</p>
+<blockquote>
+<p>signature：微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。</p>
+<p>timestamp：时间戳</p>
+<p>nonce：随机数</p>
+<p>echostr：随机字符串</p>
+</blockquote>
+<p>开发者通过检验signature对请求进行校验（下面有校验方式）。若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下：</p>
+<blockquote>
+<p>1）将token、timestamp、nonce三个参数进行字典序排序</p>
+<p>2）将三个参数字符串拼接成一个字符串进行sha1加密</p>
+<p>3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
+</blockquote>
+<p>我们需要自己写代码校验 <code>signature</code> 。这个我等一下说。</p>
+<p>验证URL有效性成功后即接入生效，成为开发者。你可以在公众平台网站中申请微信认证，认证成功后，将获得更多接口权限，满足更多业务需求。（个人账号不能认证，测试账号不用关心借口权限）</p>
+<p>成为开发者后，用户每次向公众号发送消息、或者产生自定义菜单、或产生微信支付订单等情况时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，开发者可以依据自身业务逻辑进行响应，如回复消息。</p>
+<p>至此，我们的接入流程就完毕了。接下来就是写代码校验请求。</p>
+<h3 id="2-5-">2.5 代码编写</h3>
+<p>进入Apache服务器的web根目录：<code>/var/www/html</code> 。因为后续实验涉及到文件写入的操作，所以我们需要更改一下根目录的权限：</p>
+<pre><code class="lang-sh hljs bash">sudo chmod -R 777 html
+</code></pre>
+<p>之前也说过，我们要开发一个简易的SDK，封装常用的接口功能。通俗一点就是写一个类，里面封装很多方法，一些方法对应API接口的功能实现。</p>
+<p>首先新建一个 <code>wechat.class.php</code>  作为我们的微信类，所有的API功能都通过他的方法实现。</p>
+<p>他要实现的第一个功能就是校验signature，编辑如下：</p>
+<p>验证的逻辑上面已经说过了。</p>
+<p>打开 <code>index.php</code> ，删除里面所有的内容，编辑如下：</p>
+<pre><code class="lang-php hljs"><span class="hljs-meta">&lt;?php</span>
+
+$wechatObj = <span class="hljs-keyword">new</span> WeChat($options);
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>($_GET[<span class="hljs-string">"echostr"</span>])) {
+    $wechatObj-&gt;valid();
+}
+</code></pre>
+<p>现在，你可以提交刚才配置的接口信息了。可能由于网络的原因，你需要多试几次才能成功。如果提示配置失败，你可以在浏览器中打开 <code>127.0.0.1:4040</code> 查看网络请求和响应：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476439150830.png/wm" alt="此处输入图片的描述"></p>
+<p>配置成功之后，你的响应请求应该和传来的 <code>echostr</code> 相同。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476439219862.png/wm" alt="此处输入图片的描述"></p>
+<p>配置成功，你的测试号管理页面也会有变化：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476439464507.png/wm" alt="此处输入图片的描述"></p>
+<p>至此，我们的微信公众平台就接入成功了。用户发来的所有消息都将通过微信服务器转发给我们。</p>
+<p>拿起你的手机，关注你的测试号。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476439877369.png/wm" alt="此处输入图片的描述"></p>
+<p>上图是我关注了我的测试号之后，随便发送一条消息。你也可以这样做。现在你再打开 <code>127.0.0.1:404</code> ngrok 控制面板查看，多了一条post请求，并且post的数据包含了我刚才发的消息：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476440134385.png/wm" alt="此处输入图片的描述"></p>
+<p>事实证明，我们用户发送的数据确实从微信服务器转发给了我们自己的服务器，这正是我们想要的。</p>
+<h2 id="-">三、实验总结</h2>
+<p>本次实验主要讲的是理论性的知识，首先向大家介绍了微信公众平台的背景，然后给大家介绍了如何快速搭建一个自己的微信公众号，最后介绍微信公众号开发的基本情况，如何将本地服务器变为在线服务器并完成微信公众平台的接入，最终达到了我们想要的效果，顺利的接收到了来自微信服务器的转发内容，为后续实验做好了接口开发的准备，下个实验，我们将着重接口功能的开发。</p>
+<p>最后要说明的一点，多看微信公众平台的 <a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432&amp;token=&amp;lang=zh_CN" target="_blank">开发者文档</a> 。我们所使用的一切功能，都需要参考文档说明。大家下来有时间的话，多去看看文档，能让你对微信公众平台更快更多的了解。</p>
+            </div>
+          </div>
+        </div>
+        <div class="votes-container panel panel-default padding-md">
+          <div class="panel-body vote-box text-center">
+            <div class="btn-group" style="margin-top: 10px;">
+                <button class="btn btn-success vote-btn" style=""><span class="glyphicon glyphicon-thumbs-up"></span>点赞</button>
+            </div>
+          </div>
+          <div class="voted-users">
+            <div class="user-lists">
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+              <a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="replies panel panel-default list-panel replies-index">
+          <div class="panel-heading" style="height: 45px;padding: 15px;margin-bottom: 30px">
+            <h4 class="panel-title">
+              <div class="count" style="font-size: 14px">
+                回复数：<b>30</b>
+              </div>
+            </h4>
+          </div>
+          <div class="panel-body" style="padding: 0px;">
+          <ul class="list-group">
+            <li class="list-group-item media col-md-12">
+              <div class="avatar pull-left">
+                   <a class="media-left" href="#">
+                    <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                  </a>
+              </div>
+              <div>
+              <div class="infos reply-infos">
+                <div class="media-heading" style="margin-top:-8px;">
+                  <a href="#" class="remove-padding-left author">Linfue</a>
+                  <span class="label label-success lable-admin">mod</span>
+                  <span class="introduction">&nbsp; A Life-long learner.   </span>
+                  <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                    <a href="javascript:void(0)"><img src="image/reply.ico" alt=""></a>
+                  </span>
+                  <div class="meta reply-meta">
+                     <a name="reply1" class="author" href="#reply1">#1</a> 
+                     <span> ⋅  </span>
+                     <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                  </div>
+                </div>
+                <div class="media-body markdown-reply content-body">
+                  <p>
+                    <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            </li>
+            <li class="list-group-item media col-md-12">
+              <div class="avatar pull-left">
+                   <a class="media-left" href="#">
+                    <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                  </a>
+              </div>
+              <div>
+              <div class="infos reply-infos">
+                <div class="media-heading" style="margin-top:-8px;">
+                  <a href="#" class="remove-padding-left author">Linfue</a>
+                  <span class="label label-success lable-admin">mod</span>
+                  <span class="introduction">&nbsp; A Life-long learner.   </span>
+                  <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                    <a href="javascript:void(0)"><img src="image/reply.ico" alt=""></a>
+                  </span>
+                  <div class="meta reply-meta">
+                     <a name="reply1" class="author" href="#reply1">#1</a> 
+                     <span> ⋅  </span>
+                     <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                  </div>
+                </div>
+                <div class="media-body markdown-reply content-body">
+                  <p>
+                    <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            </li>
+            <li class="list-group-item media col-md-12">
+              <div class="avatar pull-left">
+                   <a class="media-left" href="#">
+                    <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                  </a>
+              </div>
+              <div>
+              <div class="infos reply-infos">
+                <div class="media-heading" style="margin-top:-8px;">
+                  <a href="#" class="remove-padding-left author">Linfue</a>
+                  <span class="label label-success lable-admin">mod</span>
+                  <span class="introduction">&nbsp; A Life-long learner.   </span>
+                  <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                    <a href="javascript:void(0)"><img src="image/reply.ico" alt=""></a>
+                  </span>
+                  <div class="meta reply-meta">
+                     <a name="reply1" class="author" href="#reply1">#1</a> 
+                     <span> ⋅  </span>
+                     <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                  </div>
+                </div>
+                <div class="media-body markdown-reply content-body">
+                  <p>
+                    <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            </li>
+            <li class="list-group-item media col-md-12">
+              <div class="avatar pull-left">
+                   <a class="media-left" href="#">
+                    <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                  </a>
+              </div>
+              <div>
+              <div class="infos reply-infos">
+                <div class="media-heading" style="margin-top:-8px;">
+                  <a href="#" class="remove-padding-left author">Linfue</a>
+                  <span class="label label-success lable-admin">mod</span>
+                  <span class="introduction">&nbsp; A Life-long learner.   </span>
+                  <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                    <a href="javascript:void(0)"><img src="image/reply.ico" alt=""></a>
+                  </span>
+                  <div class="meta reply-meta">
+                     <a name="reply1" class="author" href="#reply1">#1</a> 
+                     <span> ⋅  </span>
+                     <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                  </div>
+                </div>
+                <div class="media-body markdown-reply content-body">
+                  <p>
+                    <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 side-bar" style="padding-left: 0px;">
+        <div class="panel panel-default corner-radius">
+          <div class="panel-heading">
+            作者 <span>Linfue</span>
+          </div>
+          <div class="panel-body text-center topic-author-box">
+            <a href="#">
+              <img class="img-circle img-thumbnail avatar" src="image/toux.jpg">
+            </a>
+          </div>
+          <div class="media-body padding-top-sm">
+            <div class="media-heading" style="padding-bottom: 10px">
+              <div class="role-label text-white" style="padding-bottom: 15px;">
+                  <a class="label label-success role" href="https://laravel-china.org/roles/1">创始人</a>
+              </div>
+              <span class="introduction">
+                   A Life-long learner. 
+              </span>
+            </div>
+            <ul class="list-inline">
+              <li><a href="#">weibo</a></li>
+              <li><a href="#">weixin</a></li>
+              <li><a href="#">zhihu</a></li>
+              <li><a href="#">github</a></li>
+            </ul>
+          </div>
+          <br>
+          <hr>
+         <div class="panel-footer">
+            <a class="btn btn-warning btn-block" href="javascript:void(0);" style="cursor:pointer;">
+                关注
+            <form action="#" method="POST" style="display:none">
+               <input type="hidden" name="_method" value="post">
+               <input type="hidden" name="_token" value="0XzfbMZCXKJGSqOjAF96w6zCtGvKCYZudt3ibgNs">
+            </form>
+            </a>
+         </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span>Linfue</span> 的其他话题
+          </div>
+          <div class="panel-body" style="padding: 0px 5px;">
+            <ul class="list-group tuijian" style="margin-bottom: 0px;">
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            该分类下其他话题
+          </div>
+          <div class="panel-body">
+            <ul class="list-group remen">
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+              <li class="list-group-item"><a href="#">Laravel 的核心概念</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            推荐资源
+          </div>
+          <div class="panel-body" style="padding: 0px 5px;">
+            <ul class="list-group tuijian" style="margin-bottom: 0px;">
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#"><img src="image/tx.jpeg" style="width: 20px;height: 20px;display: inline-block;" alt=""> &nbsp;Laravel 中文文档</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<footer class="footer">
+    <div class="container" id="footer-container">
+    <div class="col-xs-6 col-md-4">
+    <img src="image/logo.png" alt="">
+    <p>实验楼是国内领先的IT技术实训平台，采用创新的“在线实验”学习模式，为学生及在职程序员提供编程、运维、测试、云计算、大数据、数据库等最新的IT技术实践课程。</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>统计信息：</h4>
+      <ul class="list-unstyled">
+        <li>会员人数：3</li>
+        <li>话题数：3</li>
+        <li>PV:100</li>
+        <li>UV:5432534</li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>其他信息：</h4>
+      <ul class="list-unstyled">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">技术博客</a></li>
+        <li><a href="#">加入我们</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright @2013-2016 实验楼在线教育 | <a href="#">蜀ICP备13019762号</a> <a href="#">站长统计</a></p>
+    </div>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/myjs.js"></script>
+  </body>
+</html>

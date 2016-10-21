@@ -17,10 +17,10 @@
    $('.create-topic a').mouseleave(function () {
    		$(this).css({background:'white'})
    })
-   $('.huoyue a').mouseover(function() {
-   	$(this).popover('show');
-   })
-   $('.huoyue a').mouseleave(function () {
-   	$(this).popover('hide');
-   })
+   // $('.huoyue a').mouseover(function() {
+   // 	$(this).popover('show');
+   // })
+   // $('.huoyue a').mouseleave(function () {
+   // 	$(this).popover('hide');
+   // })
   });

@@ -8,7 +8,9 @@ body {
 .navbar-default navbar-fixed-top container{
 	background-color: #FFFFFF;
 }
-
+.navbar-fixed-top{
+  z-index: 1;
+}
 li a{
 	color: #777777;
 }
@@ -174,11 +176,145 @@ ul.tuijian li a:hover{
 }
 ul.tuijian li ,ul.remen li{
   border-right: none;
-  border-left: none
+  border-left: none;
 }
-div.huoyue a{
-  margin-top: 5px;
+ul.remen li a:hover{
+  color: black;
+  text-decoration: none;
+}
+ul.remen{
+  margin-bottom: 0px;
+}
+div.huoyue{
+  padding-top: 5px;
+  margin-top: 10px;
 }
 div.huoyue img{
   margin-bottom: 5px;
+}
+div.site{
+  font-family: 宋体;
+  padding-top: 10px;
+}
+div.site a{
+  color: #777777;
+}
+div.site a:hover{
+  text-decoration: none;
+  color: black; 
+}
+.topic-title{
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px;
+}
+div.panel-default .panel-heading{
+  background-color: #F8F8F8;
+}
+div.panel-heading .meta{
+  font-size: 12px;
+  /* padding-left: 10px; */
+  padding: 10px;
+}
+div.panel-heading .meta a{
+  color: #777777;
+  text-decoration: none;
+}
+div.panel-heading .meta a:hover{
+  color: black;
+  text-decoration: underline;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+div.markdown-body{
+  font-family: 微软雅黑;
+  font-size: 15px;
+}
+code{
+  white-space: normal;  
+  word-break: break-all;  
+}
+.corner-radius{
+  text-align: center;
+}
+div.topic-author-box a img{
+  width:80px; 
+  height:80px;
+  margin-top:20px;
+  border: 1px solid #777777;
+}
+div.padding-top-sm ul.list-inline li{
+  border: 1px solid #777777;
+  border-radius: 10px;
+  margin: 3px;
+}
+div.padding-top-sm ul.list-inline li:hover{
+  border-color: #2CE0D8;
+  background-color: #00B5AD;
+
+}
+div.padding-top-sm ul.list-inline li a:hover{
+  color: white;
+  text-decoration: none;
+}
+.vote-box{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.vote-btn{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  color: #4FCEEA;
+}
+.vote-btn:hover{
+  color: white;
+  background-color: #4FCEEA;
+}
+div.voted-users{
+  /* padding-left: -5px; */
+/*   padding-left: 25px;
+  padding-right: 25px; */
+  text-align: center;
+  padding-bottom: 20px
+}
+/* .voted-users a{
+    margin-bottom: 10px;
+} */
+.voted-users a img{
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  border: 2px solid #F8F8F8;
+}
+.voted-users{
+  margin-bottom: 30px;
+}
+.replies-index div.panel-body ul li{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.reply-meta,.reply-meta a{
+  margin-top: 5px;
+  font-size: 7px;
+  color: #B0C1D9;
+}
+span.introduction{
+  color: #B0C1D9;
+}
+.markdown-reply{
+  padding-left: 55px;
+  margin-top: 10px;
+  font-size: 15px;
+  /* font-family: 仿宋; */
+  /* font-weight: bold; */
+}
+.markdown-reply a{
+  color: #3BB2CA;
+}
+.markdown-reply a:hover{
+  color: black;
 }
