@@ -318,3 +318,43 @@ span.introduction{
 .markdown-reply a:hover{
   color: black;
 }
+#preview-box{
+  padding-left: 10px;
+  background-color: #FAF5EB;
+  border-style: dashed;
+  border-width: 1px;
+  padding-top: 10px;
+}
+.follow-info div a:hover{
+  text-decoration: none;
+
+}
+.follow-info div a.counter{
+  font-size: 25px;
+}
+.follow-info div a.text{
+  color: #777777;
+}
+.user-basic-nav ul a li,a.list-group-item{
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  color: #525252;
+}
+.user-basic-nav ul a:hover{
+  text-decoration: none;
+}
+.user-basic-nav ul a li:hover{
+  color: #00C4BC;
+}
+ul.list-group a.active{
+  background-color: #00B5AD;
+}
+.padding-md h2{
+  padding-left: 15px;
+  padding-top: 20px;
+  color: #525252;
+}
+.padding-md{
+  font-size: 12px;
+}
