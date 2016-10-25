@@ -17,9 +17,7 @@
     <link href="./css/navbar-fixed-top.css" rel="stylesheet">
   </head>
 
-  <body id="fakeloader" >
-
-
+  <body>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -68,7 +66,13 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
     <div class="container" id="container" style="min-height: 800px">
+      <div class="modal fade my-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="text-align: center;">
+        <div class="modal-dialog modal-lg">
+            <img id="viewimg" class="thumbnail img-responsive" alt="图片未能正确加载" style="border-width: 5px">
+        </div>
+      </div>
       <div class="col-md-9 topics-index main-col">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -104,8 +108,8 @@
 码校验 <code>signature</code> 。这个我等一下说。</p>
 <p>验证URL有效性成功后即接入生效，成为开发者。你可以在公众平台网站中申请微信认证，认证成功后，将获得更多接口权限，满足更多业务需求。（个人账号不能认证，测试账号不用关心借口权限）</p>
 <p>成为开发者后，用户每次向公众号发送消息、或者产生自定义菜单、或产生微信支付订单等情况时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，开发者可以依据自身业务逻辑进行响应，如回复消息。</p>
-
-
+<p><img src="https://dn-anything-about-doc.qbox.me/document-uid108299labid2198timestamp1476414044205.png/wm" alt="xiaoguo"></p>
+<p><img src="image/wa.jpg" alt=""></p>
             </div>
           </div>
         </div>
@@ -163,7 +167,69 @@
                     <span class="label label-success lable-admin">mod</span>
                     <span class="introduction">&nbsp; A Life-long learner.   </span>
                     <span class="operate pull-right" style="float: right;margin-top: -5px ">
-                      <a href="javascript:void(0)"><img src="image/reply.ico" alt=""></a>
+                      <a href="javascript:void(0)" class="reply-ico"><img src="image/reply.ico" alt=""></a>
+                    </span>
+                    <div class="meta reply-meta">
+                       <a name="reply1" class="author" href="#reply1">#1</a> 
+                       <span> ⋅  </span>
+                       <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                    </div>
+                  </div>
+                  <div class="media-body markdown-reply content-body">
+                    <p>
+                      <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              </li>
+
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                    </a>
+                </div>
+                <div>
+                <div class="infos reply-infos">
+                  <div class="media-heading" style="margin-top:-8px;">
+                    <a href="#" class="remove-padding-left author">shiyanlou</a>
+                    <span class="label label-success lable-admin">mod</span>
+                    <span class="introduction">&nbsp; A Life-long learner.   </span>
+                    <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                      <a href="javascript:void(0)" class="reply-ico"><img src="image/reply.ico" alt=""></a>
+                    </span>
+                    <div class="meta reply-meta">
+                       <a name="reply1" class="author" href="#reply1">#1</a> 
+                       <span> ⋅  </span>
+                       <abbr class="timeago" title="2016-10-19 08:10:00">2天前</abbr>
+                    </div>
+                  </div>
+                  <div class="media-body markdown-reply content-body">
+                    <p>
+                      <a href="https://laravel-china.org/users/5">@Aufree</a> 这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手这里有个安卓高手
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              </li>
+
+              <li class="list-group-item media col-md-12">
+                <div class="avatar pull-left">
+                     <a class="media-left" href="#">
+                      <img src="image/toux.jpg" class="img-circle img-thumbnail avatar avatar-middle" style="width: 48px;height: 48px">
+                    </a>
+                </div>
+                <div>
+                <div class="infos reply-infos">
+                  <div class="media-heading" style="margin-top:-8px;">
+                    <a href="#" class="remove-padding-left author">fuli</a>
+                    <span class="label label-success lable-admin">mod</span>
+                    <span class="introduction">&nbsp; A Life-long learner.   </span>
+                    <span class="operate pull-right" style="float: right;margin-top: -5px ">
+                      <a href="javascript:void(0)" class="reply-ico"><img src="image/reply.ico" alt=""></a>
                     </span>
                     <div class="meta reply-meta">
                        <a name="reply1" class="author" href="#reply1">#1</a> 
@@ -216,7 +282,7 @@
               <img class="img-circle img-thumbnail avatar" src="image/toux.jpg">
             </a>
           </div>
-          <div class="media-body padding-top-sm">
+          <div class="media-body padding-top-sm" style="padding-left: 20px;padding-right: 20px">
             <div class="media-heading" style="padding-bottom: 10px">
               <div class="role-label text-white" style="padding-bottom: 15px;">
                   <a class="label label-success role" href="https://laravel-china.org/roles/1">创始人</a>
@@ -227,6 +293,9 @@
             </div>
             <ul class="list-inline">
               <li><a href="#">weibo</a></li>
+              <li><a href="#">weixin</a></li>
+              <li><a href="#">zhihu</a></li>
+              <li><a href="#">github</a></li>
               <li><a href="#">weixin</a></li>
               <li><a href="#">zhihu</a></li>
               <li><a href="#">github</a></li>

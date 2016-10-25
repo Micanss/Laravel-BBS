@@ -25,7 +25,7 @@ li a{
 	width: 44px;
 	height: 44px;
 }
-.thumbnail:hover{
+div.thumbnail:hover{
 /*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
     -webkit-animation-name: "fudong"; /*动画名称，需要跟@keyframes定义的名称一致*/
     -webkit-animation-duration: 0.5s;/*动画持续的时间长*/
@@ -163,6 +163,9 @@ div.infos{
 img.user_small_avatar{
   width: 20px;
   height: 20px;
+}
+div.side-bar{
+  z-index: 0;
 }
 div.side-bar div.panel-heading{
   text-align: center
@@ -358,3 +361,32 @@ ul.list-group a.active{
 .padding-md{
   font-size: 12px;
 }
+
+.help-box ul li{
+  border-bottom: none;
+  border-top: none;
+  padding-bottom: 2px;
+}
+.help-box div.panel-body{
+  padding: 0px;
+  text-align: left; 
+  /* padding-top: 30px; */
+}
+ul.lastinfo li{
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+ul.lastinfo li a{
+  color: #53A9C1;
+}
+span.meta{
+  color: #D0D0D0;
+}
+span.meta attr{
+  color: #AAAAAA;
+}
+#viewimg{
+  margin: auto;
+}
+

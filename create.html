@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>实验楼bbs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/navbar-fixed-top.css" rel="stylesheet">
+  </head>
+
+  <body id="fakeloader" >
+
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">实验楼-Laravel</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="margin-bottom: 1px">
+          <ul class="nav navbar-nav">
+            <li><a href="topics.html">社区</a></li>
+            <li><a href="courses.html">课程</a></li>
+            <li><a href="questions.html">问答</a></li>
+            <li><a href="sites.html">酷站</a></li>
+            <li><a href="#contact">Wiki</a></li>
+            <li><a href="#contact">招聘</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" id="search" placeholder="Search...">
+          </form>
+          </li>
+
+            <li><a href="#">新增主题</a></li>
+            <li><a href="#">新消息：<span class="badge">0</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" aria-expanded="false" style="height: 50px;padding-top: 11px">
+              <span><img class="img-circle" src="image/tx.jpeg" style="height: 30px;width: 30px" alt=""></span>
+              Linfue
+               <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" style="text-align: center;">
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+                <li class="divider"></li>
+                <li><a href="setting.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;资料设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-share"></span> &nbsp;&nbsp;注销</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container" id="container" style="min-height: 800px">
+      <div class="col-md-8 topics-index main-col">
+        <div class="reply-box form box-block">
+          <div class="alert alert-warning" role="alert">
+          我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+          </div>
+          <form action="#" method="post" accept-charset="utf-8">
+              <input type="hidden" name="_token" value="">
+              <div class="form-group">
+                <select class="selectpicker form-control" name="category_id" id="category-select">
+                  <option value="" disabled="" selected="">请选择分类</option>
+                  <option value="1">招聘</option>
+                  <option value="2">问答</option>
+                  <option value="3">分享</option>
+                  <option value="5">教程</option>
+                </select>
+              </div>
+              <div class="category-hint alert alert-warning category-1" style="display: none;">
+                111我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+              </div>
+              <div class="category-hint alert alert-warning category-2" style="display: none;">
+                2222我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+              </div>
+              <div class="category-hint alert alert-warning category-3" style="display: none;">
+                3333我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+              </div>
+              <div class="category-hint alert alert-warning category-4" style="display: none;">
+                444我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+              </div>
+              <div class="category-hint alert alert-warning category-5" style="display: none;">
+                555我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="topic-title" placeholder="请填写标题" name="title" type="text" required="" value="">
+              </div>
+              <div class="form-group">
+                  <textarea class="form-control" rows="20" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 614px;" id="reply_content" placeholder="请使用 Markdown 格式书写 ;-)" name="body" cols="50" required=""></textarea>
+              </div>
+              <div class="form-group status-post-submit" >
+                  <input class="btn btn-primary" id="topic-create-submit" type="submit" value="发 布" >
+              </div>
+              <div class="box preview markdown-body" id="preview-box" hidden=""></div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 side-bar" style="padding-left: 0px;">
+        <div class="panel panel-default corner-radius help-box" >
+          <div class="panel-heading">
+            推荐课程
+          </div>
+          <div class="panel-body" style="padding-top: 10px">
+            <ul class="list-group">
+              <li class="list-group-item">请传播美好的事物，这里拒绝低俗、诋毁、谩骂等相关信息</li>
+              <li class="list-group-item">请尽量分享技术相关的话题，谢绝发布社会, 政治等相关新闻</li>
+              <li class="list-group-item">这里绝对不讨论任何有关盗版软件、音乐、电影如何获得的问题</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default corner-radius help-box">
+          <div class="panel-heading">
+            在高质量优秀社区的我们
+          </div>
+          <div class="panel-body" style="padding-top: 10px">
+            <ul class="list-group">
+              <li class="list-group-item">分享生活见闻, 分享知识</li>
+              <li class="list-group-item">接触新技术, 讨论技术解决方案</li>
+              <li class="list-group-item">为自己的创业项目找合伙人, 遇见志同道合的人</li>
+              <li class="list-group-item">自发线下聚会, 加强社交</li>
+              <li class="list-group-item">发现更好工作机会</li>
+              <li class="list-group-item">甚至是开始另一个神奇的开源项目</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<footer class="footer">
+    <div class="container" id="footer-container">
+    <div class="col-xs-6 col-md-4">
+    <img src="image/logo.png" alt="">
+    <p>实验楼是国内领先的IT技术实训平台，采用创新的“在线实验”学习模式，为学生及在职程序员提供编程、运维、测试、云计算、大数据、数据库等最新的IT技术实践课程。</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>统计信息：</h4>
+      <ul class="list-unstyled">
+        <li>会员人数：3</li>
+        <li>话题数：3</li>
+        <li>PV:100</li>
+        <li>UV:5432534</li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h4>其他信息：</h4>
+      <ul class="list-unstyled">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">技术博客</a></li>
+        <li><a href="#">加入我们</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright @2013-2016 实验楼在线教育 | <a href="#">蜀ICP备13019762号</a> <a href="#">站长统计</a></p>
+    </div>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/marked.js"></script>
+    <script src="./js/myjs.js"></script>
+  </body>
+</html>
