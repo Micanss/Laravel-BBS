@@ -79,4 +79,7 @@
    	$('#viewimg').attr('src',$(this).attr('src'));
    	$('.modal').modal('show');
    })
+   // $('.vote-btn').click(function() {
+   //    $('.voted-users div').append('<a href="#" data-userid="1241"><img src="image/vote.jpeg" class="img-circle" alt=""></a>');
+   // });
   });

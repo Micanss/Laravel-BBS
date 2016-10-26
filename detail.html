@@ -425,5 +425,20 @@
     <script src="./js/marked.js"></script>
 
     <script src="./js/myjs.js"></script>
+    <script>
+       $('.vote-btn').click(function() {
+        if ($(this).text() == '点赞') {
+          $('.voted-users div').append('<a href="#" data-userid="1242"><img src="image/vote.jpeg" class="img-circle" alt=""></a>');
+          $(this).text('取消赞');
+          $(this).removeClass('btn-success');
+          $(this).addClass('btn-warning');
+        } else {
+          $('a[data-userid=1242]').remove();
+          $(this).text('点赞');
+          $(this).removeClass('btn-warning');
+          $(this).addClass('btn-success');
+        }
+       });
+    </script>
   </body>
 </html>

@@ -269,8 +269,8 @@ div.padding-top-sm ul.list-inline li a:hover{
 .vote-btn{
   padding-left: 20px;
   padding-right: 20px;
-  background-color: white;
-  color: #4FCEEA;
+  /* background-color: white; */
+  color: white;
 }
 .vote-btn:hover{
   color: white;
